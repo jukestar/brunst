@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Home</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="log-out"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngFor="let cow of cows | async">
+
+        <ion-item text-wrap>
+            <h2>{{cow.name}}</h2>
+        </ion-item>
+
+    </ion-card>
+</ion-content>
